@@ -8,18 +8,20 @@ realms_persistence\.json
 saves/*/data/
 
 saves/*/region/r\.-1\.-1\.mca
-
+saves/*/region/r\.-1\.-2\.mca
 saves/*/region/r\.-1\.0\.mca
-
 saves/*/region/r\.-1\.1\.mca
-
+saves/*/region/r\.-2\.-1\.mca
+saves/*/region/r\.-2\.-2\.mca
+saves/*/region/r\.-2\.0\.mca
+saves/*/region/r\.-2\.1\.mca
 saves/*/region/r\.0\.-1\.mca
-
+saves/*/region/r\.0\.-2\.mca
 saves/*/region/r\.0\.1\.mca
-
 saves/*/region/r\.1\.-1\.mca
-
+saves/*/region/r\.1\.-2\.mca
 saves/*/region/r\.1\.0\.mca
+saves/*/region/r\.1\.1\.mca
 
 usercache\.json
 
@@ -38,3 +40,19 @@ saves/*/DIM-1/
 saves/*/DIM1/
 
 *.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
