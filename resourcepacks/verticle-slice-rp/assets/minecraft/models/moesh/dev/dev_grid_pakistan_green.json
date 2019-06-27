@@ -1,0 +1,7 @@
+{
+	"__comment": "Designed by Moesh http://moesh.ca/",
+	"parent": "block/cube_all",
+	"textures" : {
+		"all": "moesh/dev/dev_grid_pakistan_green"
+	}
+}
