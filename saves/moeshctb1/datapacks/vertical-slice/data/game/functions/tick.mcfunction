@@ -13,7 +13,8 @@ scoreboard players set @a[scores={SneakTime=1..}] SneakTime 0
 
 # If player is builder, they are refilled to 32 scaffolding every 10 seconds
 scoreboard players add @a[tag=Builder] timeToRefill 1
-
-tag add @a[tag=Builder,scores={timeToRefill=200}] RefillScaffolding
+tag @a[tag=Builder,scores={timeToRefill=200}] add RefillScaffolding
+clear @a[tag=RefillScaffolding] minecraft:scaffolding
+give @a[tag=RefillScaffolding] minecraft:scaffolding{CanPlaceOn:["minecraft:iron_block","minecraft:scaffolding"],CanDestroy:["minecraft:scaffolding"]} 32
 scoreboard players set @a[tag=RefillScaffolding] timeToRefill 0
-scoreboard players set @a[tag=RefillScaffolding] timeToRefill 0
+tag @a[tag=RefillScaffolding] remove RefillScaffolding
