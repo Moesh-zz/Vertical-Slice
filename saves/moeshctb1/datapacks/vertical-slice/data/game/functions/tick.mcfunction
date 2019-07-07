@@ -10,9 +10,9 @@ execute if entity @a[tag=!Registered] run function game:register_player
 # Purpose: Refill hunger, but do not overdo saturation
 #---------------------------------------------------------------------------------------------------
 # Players must not have enough saturation to regenerate their health
-execute as @s[tag=Registered,scores={foodLevel=..19}] at @s run effect give @s minecraft:saturation 1 0 true
-execute as @s[tag=Registered,scores={foodLevel=20}] at @s run effect clear @s minecraft:saturation
-execute as @s[tag=Registered,scores={foodLevel=..19}] at @s run say hi
+execute as @a if score @s foodLevel matches ..19 run effect give @s minecraft:saturation 3 1 true
+execute as @a if score @s foodLevel matches 20 run effect clear @s minecraft:saturation
+execute as @a if score @s foodLevel matches ..19 run say hi
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Give levitation to players who enter chutes when they are not shifting.
@@ -42,9 +42,9 @@ scoreboard players set @a[scores={sneakTime=1..}] sneakTime 0
 scoreboard players add @a[tag=Builder] timeToRefill 1
 # When timer hits max
 
-tag @a[tag=Builder,scores={timeToRefill=200}] add RefillScaffolding
+tag @a[tag=Builder,scores={timeToRefill=140}] add RefillScaffolding
 clear @a[tag=RefillScaffolding] minecraft:scaffolding
-give @a[tag=RefillScaffolding] minecraft:scaffolding{CanPlaceOn:["minecraft:iron_block","minecraft:scaffolding"],CanDestroy:["minecraft:scaffolding"]} 12
+give @a[tag=RefillScaffolding] minecraft:scaffolding{CanPlaceOn:["minecraft:emerald_block","minecraft:scaffolding"],CanDestroy:["minecraft:scaffolding"]} 6
 scoreboard players set @a[tag=RefillScaffolding] timeToRefill 0
 tag @a[tag=RefillScaffolding] remove RefillScaffolding
 
