@@ -1,6 +1,7 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Enable "Builder" systems for player, give items, apply effects
 #---------------------------------------------------------------------------------------------------
+# Update "class" tags
 tag @s[tag=Breaker] remove Breaker
 tag @s add Builder
 
@@ -11,12 +12,11 @@ effect give @s minecraft:speed 999999 4 false
 
 # Give required items
 # Instead of giving scaffolding, we will trigger the refill system to deal with this.
-
 tag @s add RefillScaffolding
-replaceitem entity @s armor.feet minecraft:diamond_boots{Unbreakable:1,Enchantments:[{id:"minecraft:feather_falling",lvl:4},{id:"minecraft:binding_curse",lvl:1}]}
 
-# Initialize on scoreboard
+# Initialize scoreboards
 scoreboard players add @s SneakTime 0
 
+# Announce and remove calling tag
 tellraw @a {"translate":"game.classes.builder.joined","with":[{"selector":"@s"}]}
 tag @s remove MakeBuilderClass
