@@ -4,6 +4,8 @@
   "block.minecraft.emerald_block": "Grid Block (Pakistan Green) #dev",
   "block.minecraft.iron_block": "Grid Block (Mountain Mist) #dev",
   "block.minecraft.lapis_block": "Grid Block (Byzantium) #dev",
-  "block.minecraft.redstone_block": "Grid Block (Red Devil) #dev"
+  "block.minecraft.redstone_block": "Grid Block (Red Devil) #dev",
 
+  "game.player.joined.builder":"%s selected Builder class",
+  "game.player.joined.breker":"%s selected Breaker class"
 }
