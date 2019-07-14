@@ -57,6 +57,28 @@ kill @e[type=arrow,nbt={inGround:1b}]
 execute as @e[type=arrow] at @s run data merge entity @s {Glowing:1b}
 execute as @e[type=trident] at @s run data merge entity @s {Glowing:1b}
 
+#---------------------------------------------------------------------------------------------------
+# Purpose: Detect when player is in the air and just used a trident, apply glowing and break the
+#		   breakable blocks.
+#---------------------------------------------------------------------------------------------------
+# Has the player used a Trident to riptide? Make them break blocks.
+execute as @a[tag=Breaker,nbt={OnGround:0b},scores={usedTrident=1}] run tag @s add BreakBlocks
+scoreboard players set @a[tag=BreakBlocks] usedTrident 0
+
+# If they aren't glowing, make them glow.
+execute as @a[tag=BreakBlocks,nbt={Glowing:0b}] run effect give @s minecraft:glowing 999999 0 true
+
+# Increment the refill timer
+scoreboard players add @a[tag=BreakBlocks] riptideTime 1
+
+execute as @a[tag=BreakBlocks] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 minecraft:air replace minecraft:diamond_block
+
+# Riptide is done, stop!
+execute as @a[tag=BreakBlocks,scores={riptideTime=20}] run tag @s add StopBreakingBlocks
+execute as @a[tag=StopBreakingBlocks] run effect clear @s minecraft:glowing
+execute as @a[tag=StopBreakingBlocks] run scoreboard players set @s riptideTime 0
+execute as @a[tag=StopBreakingBlocks] run tag @s remove BreakBlocks
+execute as @a[tag=StopBreakingBlocks] run tag @s remove StopBreakingBlocks
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Teleport dropped items back to owners.
