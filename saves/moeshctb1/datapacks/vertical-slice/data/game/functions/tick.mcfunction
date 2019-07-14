@@ -49,3 +49,9 @@ replaceitem entity @a[tag=Builder,tag=RefillItems] inventory.26 minecraft:arrow 
 scoreboard players set @a[tag=RefillItems] timeToRefill 0
 tag @a[tag=RefillItems] remove RefillItems
 
+#---------------------------------------------------------------------------------------------------
+# Purpose: Projectiles should glow when in air. Arrows die in the ground.
+#---------------------------------------------------------------------------------------------------
+kill @e[type=arrow,nbt={inGround:1b}]
+execute as @e[type=arrow] at @s run data merge entity @s {Glowing:1b}
+execute as @e[type=trident] at @s run data merge entity @s {Glowing:1b}
