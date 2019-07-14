@@ -71,7 +71,7 @@ execute as @a[tag=BreakBlocks,nbt={Glowing:0b}] run effect give @s minecraft:glo
 # Increment the refill timer
 scoreboard players add @a[tag=BreakBlocks] riptideTime 1
 
-execute as @a[tag=BreakBlocks] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 minecraft:air replace minecraft:diamond_block
+execute as @a[tag=BreakBlocks] at @s anchored eyes run fill ~ ~ ~ ^3 ^3 ^3 minecraft:air replace minecraft:diamond_block
 
 # Riptide is done, stop!
 execute as @a[tag=BreakBlocks,scores={riptideTime=20}] run tag @s add StopBreakingBlocks
