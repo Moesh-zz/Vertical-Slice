@@ -7,5 +7,5 @@
   "block.minecraft.redstone_block": "Grid Block (Red Devil) #dev",
 
   "game.player.joined.builder":"%s selected Builder class",
-  "game.player.joined.breker":"%s selected Breaker class"
+  "game.player.joined.breaker":"%s selected Breaker class"
 }
