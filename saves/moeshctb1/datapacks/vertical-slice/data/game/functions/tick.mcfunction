@@ -12,7 +12,6 @@ execute if entity @a[tag=!Registered] run function game:register_player
 # Players must not have enough saturation to regenerate their health
 execute as @a if score @s foodLevel matches ..19 run effect give @s minecraft:saturation 3 1 true
 execute as @a if score @s foodLevel matches 20 run effect clear @s minecraft:saturation
-execute as @a if score @s foodLevel matches ..19 run say hi
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Give levitation to players who enter chutes when they are not shifting.
