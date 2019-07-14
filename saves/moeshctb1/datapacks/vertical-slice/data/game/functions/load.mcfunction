@@ -13,6 +13,9 @@ scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
 scoreboard objectives remove foodLevel
 scoreboard objectives add foodLevel food
 
+scoreboard objectives remove droppedItem	
+scoreboard objectives add droppedItem minecraft.custom:drop
+
 # We're in development, give me a preview of an objective
 scoreboard objectives setdisplay sidebar foodLevel
 

@@ -55,3 +55,9 @@ tag @a[tag=RefillItems] remove RefillItems
 kill @e[type=arrow,nbt={inGround:1b}]
 execute as @e[type=arrow] at @s run data merge entity @s {Glowing:1b}
 execute as @e[type=trident] at @s run data merge entity @s {Glowing:1b}
+
+
+#---------------------------------------------------------------------------------------------------
+# Purpose: Teleport dropped items back to owners.
+#---------------------------------------------------------------------------------------------------
+execute if entity @a[scores={droppedItems=1..}] run function game:give_dropped_items_back
