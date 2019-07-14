@@ -19,7 +19,6 @@ scoreboard objectives setdisplay sidebar foodLevel
 #---------------------------------------------------------------------------------------------------
 # Purpose: Set all game rules
 #---------------------------------------------------------------------------------------------------
-
 # Set to true during development time
 gamerule commandBlockOutput true
 gamerule logAdminCommands true
