@@ -9,7 +9,7 @@ tag @s remove MakeBreakerClass
 # Apply effects breakers should have
 effect clear @s
 effect give @s minecraft:jump_boost 999999 2 false
-effect give @s minecraft:speed 999999 4 false
+effect give @s minecraft:speed 999999 3 false
 effect give @s minecraft:slow_falling 999999 0 false
 
 tag @s add RefillScaffolding

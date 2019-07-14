@@ -9,7 +9,7 @@ tag @s remove MakeBuilderClass
 # Remove all effects and apply new ones
 effect clear @s
 effect give @s minecraft:jump_boost 999999 2 false
-effect give @s minecraft:speed 999999 4 false
+effect give @s minecraft:speed 999999 3 false
 
 # Give required items
 replaceitem entity @s hotbar.0 minecraft:crossbow{Unbreakable:1,Enchantments:[{id:"minecraft:multishot",lvl:1}]}
