@@ -35,15 +35,17 @@ execute as @a[tag=ShootUpChute] at @s anchored feet if block ~ ~ ~ minecraft:air
 scoreboard players set @a[scores={sneakTime=1..}] sneakTime 0
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: Refill Scaffolding every 10 seconds
+# Purpose: Refill items every 10 seconds
 #---------------------------------------------------------------------------------------------------
 # Increment the refill timer
 scoreboard players add @a[tag=Builder] timeToRefill 1
 # When timer hits max
+tag @a[tag=Builder,scores={timeToRefill=140}] add RefillItems
+clear @a[tag=RefillItems] minecraft:scaffolding
 
-tag @a[tag=Builder,scores={timeToRefill=140}] add RefillScaffolding
-clear @a[tag=RefillScaffolding] minecraft:scaffolding
-give @a[tag=RefillScaffolding] minecraft:scaffolding{CanPlaceOn:["minecraft:emerald_block","minecraft:scaffolding"],CanDestroy:["minecraft:scaffolding"]} 6
-scoreboard players set @a[tag=RefillScaffolding] timeToRefill 0
-tag @a[tag=RefillScaffolding] remove RefillScaffolding
+# Give items which need to be refilled.
+give @a[tag=Builder,tag=RefillItems] minecraft:scaffolding{CanPlaceOn:["minecraft:emerald_block","minecraft:scaffolding"],CanDestroy:["minecraft:scaffolding"]} 6
+replaceitem entity @a[tag=Builder,tag=RefillItems] inventory.26 minecraft:arrow 32
+scoreboard players set @a[tag=RefillItems] timeToRefill 0
+tag @a[tag=RefillItems] remove RefillItems
 
