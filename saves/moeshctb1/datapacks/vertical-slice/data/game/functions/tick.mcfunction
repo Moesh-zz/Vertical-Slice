@@ -1,10 +1,11 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Run functions when entity is found with tag
 #---------------------------------------------------------------------------------------------------
+execute if entity @a[tag=!Registered] run function game:register_player
+
 execute as @a[tag=MakeBuilderClass] run function game:make_builder
 execute as @a[tag=MakeBreakerClass] run function game:make_breaker
 
-execute if entity @a[tag=!Registered] run function game:register_player
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Refill hunger, but do not overdo saturation
