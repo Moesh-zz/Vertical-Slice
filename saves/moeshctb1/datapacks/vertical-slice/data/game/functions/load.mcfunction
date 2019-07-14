@@ -1,8 +1,9 @@
-
 #---------------------------------------------------------------------------------------------------
 # Purpose: Initialize session objectives
-#---------------------------------------------------------------------------------------------------
+
 # If a variable must persist from session to session, use a different file to initialize objectives.
+#---------------------------------------------------------------------------------------------------
+
 scoreboard objectives remove timeToRefill
 scoreboard objectives add timeToRefill dummy
 	scoreboard players set #RefillScaffolding timeToRefill 200
@@ -16,8 +17,13 @@ scoreboard objectives add foodLevel food
 scoreboard objectives remove droppedItem	
 scoreboard objectives add droppedItem minecraft.custom:drop
 
+scoreboard objectives remove usedTrident
+scoreboard objectives remove riptideTime
+scoreboard objectives add usedTrident minecraft.used:minecraft.trident
+scoreboard objectives add riptideTime dummy
+
 # We're in development, give me a preview of an objective
-scoreboard objectives setdisplay sidebar foodLevel
+scoreboard objectives setdisplay sidebar riptideTime
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Set all game rules
