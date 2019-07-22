@@ -119,3 +119,7 @@ saves/world/region/r\.0\.0\.mca
 saves/world/uid\.dat
 
 servers\.dat
+
+*.sublime-project
+
+*.sublime-workspace
