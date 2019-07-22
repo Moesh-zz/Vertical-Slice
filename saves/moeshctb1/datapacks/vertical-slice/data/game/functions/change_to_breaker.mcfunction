@@ -1,3 +1,6 @@
+# Purpose: Change player's class to Breaker
+# Called from: tick.mcfunction
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Enable "Breaker" systems for player, give items, apply effects
 #---------------------------------------------------------------------------------------------------

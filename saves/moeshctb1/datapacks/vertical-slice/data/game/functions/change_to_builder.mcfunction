@@ -1,3 +1,6 @@
+# Purpose: Change player's to Builder class
+# Called from: tick.mcfunction
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Enable "Builder" systems for player, give items, apply effects
 #---------------------------------------------------------------------------------------------------

@@ -3,8 +3,8 @@
 #---------------------------------------------------------------------------------------------------
 execute if entity @a[tag=!Registered] run function game:register_player
 
-execute as @a[tag=MakeBuilderClass] run function game:make_builder
-execute as @a[tag=MakeBreakerClass] run function game:make_breaker
+execute as @a[tag=MakeBuilderClass] run function game:change_to_builder
+execute as @a[tag=MakeBreakerClass] run function game:change_to_breaker
 
 
 #---------------------------------------------------------------------------------------------------
