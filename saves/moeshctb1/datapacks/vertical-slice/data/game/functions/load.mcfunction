@@ -1,6 +1,9 @@
+# Purpose: Initialize scoreboard objectives, gamerules, and other setup
+# Called from: N/A
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Initialize session objectives
-
+#
 # If a variable must persist from session to session, use a different file to initialize objectives.
 #---------------------------------------------------------------------------------------------------
 
