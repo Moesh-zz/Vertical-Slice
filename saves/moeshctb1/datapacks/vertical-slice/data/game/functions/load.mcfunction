@@ -1,5 +1,5 @@
 # Purpose: Initialize scoreboard objectives, gamerules, and other setup
-# Called from: N/A
+# Called from: /minecraft/tags/load.json
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Initialize session objectives
