@@ -2,6 +2,11 @@
 # Called from: N/A
 
 #---------------------------------------------------------------------------------------------------
+# Purpose: Run weird build commands at location.
+#---------------------------------------------------------------------------------------------------
+#execute as Moesh at Moesh run fill ~ ~-1 ~ ~ 13 ~ minecraft:iron_block
+
+#---------------------------------------------------------------------------------------------------
 # Purpose: Run functions when entity is found with tag
 #---------------------------------------------------------------------------------------------------
 execute if entity @a[tag=!Registered] run function game:register_player
