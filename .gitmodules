@@ -1,0 +1,3 @@
+[submodule "inMoeshn"]
+	path = resourcepacks/
+	url = git@github.com:Moesh/inMoeshn.git
